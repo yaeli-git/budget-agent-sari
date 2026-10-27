@@ -1,0 +1,27 @@
+{
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "turns": [
+    {"session": 1, "user_input": "שלום, קניתי היום חלב ולחם ב-40 שקלים. תוסיף את זה לקטגוריה 'מזון'."},
+    {"session": 1, "user_input": "תזכור בבקשה לפעמים הבאות: התקציב החודשי שלי למזון הוא 1500 שקלים, ואני מעדיפה לראות סכומים בשקלים."},
+    {"session": 1, "user_input": "אני רוצה להזמין את הספר Atomic Habits מארה\"ב ב-20 דולר. מה שער החליפין של דולר, וכמה זה ייצא בשקלים?"},
+    {"session": 1, "user_input": "מעולה, תוסיף 75 שקלים לקטגוריה 'ספרים' על הספר הזה."},
+    {"session": 2, "user_input": "היי שוב. כמה הוצאתי עד עכשיו על קטגוריית 'מזון', וכמה נשאר לי מהתקציב החודשי למזון?"},
+    {"session": 2, "user_input": "קניתי עכשיו פירות ב-30 שקלים למזון. כמה הוצאתי עכשיו בסך הכל על מזון?"},
+    {"session": 2, "user_input": "שינוי: מעכשיו התקציב החודשי שלי למזון הוא 1200 שקלים ולא 1500. כמה נשאר לי עכשיו, בשקלים וגם בדולרים?"},
+    {"session": 2, "user_input": "אתה יכול להזכיר לי איזה ספר בדיוק קניתי בהוצאות שלי?"}
+  ],
+  "checks": [
+    {"name": "exactly 3 expenses saved", "type": "expense_count", "value": 3},
+    {"name": "food total saved = 70", "type": "category_total", "category_regex": "מזון", "value": 70},
+    {"name": "book expense saved: 75 in 'ספרים' with the title", "type": "expense_match",
+     "category_regex": "ספר", "amount": 75, "description_regex": "atomic"},
+    {"name": "contradiction: food budget memory is 1200, old 1500 gone", "type": "preference_match",
+     "key_regex": "food|מזון", "value_regex": "1200|1,200", "stale_regex": "1500|1,500"},
+    {"name": "currency preference saved (ILS)", "type": "preference_match",
+     "key_regex": "currenc|מטבע|שקל|ILS", "value_regex": "שקל|ILS|₪"},
+    {"name": "external exchange-rate tool used", "type": "tool_called", "tool": "get_exchange_rate", "turn": 3},
+    {"name": "session 2 recalls the 1500 budget: 1460 left", "type": "response_matches", "turn": 5, "regex": "1,?460"},
+    {"name": "session 2 recalls the book title", "type": "response_matches", "turn": 8, "regex": "atomic"}
+  ]
+}

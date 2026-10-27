@@ -1,0 +1,408 @@
+{
+  "harness": "sdk",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "turns": [
+    {
+      "session": 1,
+      "turn": 1,
+      "user": "שלום, קניתי היום חלב ולחם ב-40 שקלים. תוסיף את זה לקטגוריה 'מזון'.",
+      "response": "הוספתי את ההוצאה: 40 ₪ על חלב ולחם בקטגוריה 'מזון'. עד עכשיו הוצאת 40 ₪ בסך הכול על מזון.",
+      "tools": [
+        "add_expense"
+      ],
+      "tokens": {
+        "input": 1217,
+        "cache_read": 4662,
+        "cache_write": 0,
+        "output": 486
+      },
+      "model_calls": 2,
+      "cost_usd": 0.004823,
+      "cost_usd_at_opus_prices": 0.01552,
+      "per_model": {
+        "claude-opus-5-5": {
+          "input": 4,
+          "cache_read": 4662,
+          "cache_write": 0,
+          "output": 180,
+          "cost": 0.0045484
+        },
+        "claude-haiku-5-5": {
+          "input": 1213,
+          "cache_read": 0,
+          "cache_write": 0,
+          "output": 306,
+          "cost": 0.0002743
+        }
+      },
+      "sdk_session_total_cost_usd": 0.0048227,
+      "seconds": 4.86
+    },
+    {
+      "session": 1,
+      "turn": 2,
+      "user": "תזכור בבקשה לפעמים הבאות: התקציב החודשי שלי למזון הוא 1500 שקלים, ואני מעדיפה לראות סכומים בשקלים.",
+      "response": "שמרתי לפעמים הבאות:\n- התקציב החודשי שלך למזון הוא 1,500 ₪. עד עכשיו הוצאת 40 ₪, אז נשארו לך 1,460 ₪.\n- סכומים יוצגו לך בשקלים.",
+      "tools": [
+        "save_preference",
+        "save_preference"
+      ],
+      "tokens": {
+        "input": 6,
+        "cache_read": 4961,
+        "cache_write": 414,
+        "output": 266
+      },
+      "model_calls": 3,
+      "cost_usd": 0.009648,
+      "cost_usd_at_opus_prices": 0.008406,
+      "per_model": {
+        "claude-opus-5-5": {
+          "input": 6,
+          "cache_read": 4961,
+          "cache_write": 414,
+          "output": 266,
+          "cost": 0.0096482
+        },
+        "claude-haiku-5-5": {
+          "input": 0,
+          "cache_read": 0,
+          "cache_write": 0,
+          "output": 0,
+          "cost": 0
+        }
+      },
+      "sdk_session_total_cost_usd": 0.014470900000000002,
+      "seconds": 6.0
+    },
+    {
+      "session": 1,
+      "turn": 3,
+      "user": "אני רוצה להזמין את הספר Atomic Habits מארה\"ב ב-20 דולר. מה שער החליפין של דולר, וכמה זה ייצא בשקלים?",
+      "response": "שער הדולר כרגע הוא 3.0799 ₪ (לפי ECB, נכון ל-26.10.2026). לכן הספר Atomic Habits ב-20 דולר ייצא בערך **61.60 ₪**, לפני משלוח ועמלות.\n\nעוד לא רשמתי את זה כהוצאה. אם תזמיני אותו, אוסיף אותו לקטגוריה 'ספרים'.",
+      "tools": [
+        "get_exchange_rate"
+      ],
+      "tokens": {
+        "input": 6,
+        "cache_read": 5813,
+        "cache_write": 260,
+        "output": 263
+      },
+      "model_calls": 2,
+      "cost_usd": 0.008527,
+      "cost_usd_at_opus_prices": 0.007747,
+      "per_model": {
+        "claude-opus-5-5": {
+          "input": 6,
+          "cache_read": 5813,
+          "cache_write": 260,
+          "output": 263,
+          "cost": 0.008526599999999999
+        },
+        "claude-haiku-5-5": {
+          "input": 0,
+          "cache_read": 0,
+          "cache_write": 0,
+          "output": 0,
+          "cost": 0
+        }
+      },
+      "sdk_session_total_cost_usd": 0.022997500000000004,
+      "seconds": 7.63
+    },
+    {
+      "session": 1,
+      "turn": 4,
+      "user": "מעולה, תוסיף 75 שקלים לקטגוריה 'ספרים' על הספר הזה.",
+      "response": "הוספתי 75 ₪ על Atomic Habits בקטגוריה 'ספרים'. עד עכשיו הוצאת 75 ₪ בסך הכול על ספרים.\n\nהסכום גבוה בכ-13 ₪ מ-61.60 ₪ שחישבנו לפי השער. זה כנראה בגלל משלוח או עמלות.",
+      "tools": [
+        "add_expense"
+      ],
+      "tokens": {
+        "input": 6,
+        "cache_read": 6409,
+        "cache_write": 438,
+        "output": 254
+      },
+      "model_calls": 2,
+      "cost_usd": 0.00989,
+      "cost_usd_at_opus_prices": 0.008576,
+      "per_model": {
+        "claude-opus-5-5": {
+          "input": 6,
+          "cache_read": 6409,
+          "cache_write": 438,
+          "output": 254,
+          "cost": 0.009889800000000004
+        },
+        "claude-haiku-5-5": {
+          "input": 0,
+          "cache_read": 0,
+          "cache_write": 0,
+          "output": 0,
+          "cost": 0
+        }
+      },
+      "sdk_session_total_cost_usd": 0.03288730000000001,
+      "seconds": 4.76
+    },
+    {
+      "session": 2,
+      "turn": 5,
+      "user": "היי שוב. כמה הוצאתי עד עכשיו על קטגוריית 'מזון', וכמה נשאר לי מהתקציב החודשי למזון?",
+      "response": "עד עכשיו הוצאת **40₪** על מזון: הוצאה אחת, חלב ולחם.\n\nהתקציב החודשי שלך למזון הוא **1,500₪**, אז נשארו לך **1,460₪**.\n\nשימי לב: הכלי מחזיר את סך כל ההוצאות בקטגוריה ולא מפריד לפי חודש. החישוב נכון רק אם כל ההוצאות האלה הן מהחודש הנוכחי.",
+      "tools": [
+        "get_balance",
+        "get_preferences"
+      ],
+      "tokens": {
+        "input": 1227,
+        "cache_read": 4814,
+        "cache_write": 0,
+        "output": 518
+      },
+      "model_calls": 3,
+      "cost_usd": 0.007776,
+      "cost_usd_at_opus_prices": 0.016231,
+      "per_model": {
+        "claude-haiku-5-5": {
+          "input": 1223,
+          "cache_read": 0,
+          "cache_write": 0,
+          "output": 189,
+          "cost": 0.0002168
+        },
+        "claude-opus-5-5": {
+          "input": 4,
+          "cache_read": 4814,
+          "cache_write": 0,
+          "output": 329,
+          "cost": 0.007558800000000001
+        }
+      },
+      "sdk_session_total_cost_usd": 0.007775600000000001,
+      "seconds": 6.48
+    },
+    {
+      "session": 2,
+      "turn": 6,
+      "user": "קניתי עכשיו פירות ב-30 שקלים למזון. כמה הוצאתי עכשיו בסך הכל על מזון?",
+      "response": "רשמתי את הפירות, 30₪, בקטגוריית מזון.\n\nעכשיו הוצאת על מזון **70₪** בסך הכל: חלב ולחם ב-40₪ ופירות ב-30₪. מהתקציב החודשי של 1,500₪ נשארו לך **1,430₪**.",
+      "tools": [
+        "add_expense"
+      ],
+      "tokens": {
+        "input": 6,
+        "cache_read": 5326,
+        "cache_write": 414,
+        "output": 258
+      },
+      "model_calls": 2,
+      "cost_usd": 0.009561,
+      "cost_usd_at_opus_prices": 0.008319,
+      "per_model": {
+        "claude-haiku-5-5": {
+          "input": 0,
+          "cache_read": 0,
+          "cache_write": 0,
+          "output": 0,
+          "cost": 0
+        },
+        "claude-opus-5-5": {
+          "input": 6,
+          "cache_read": 5326,
+          "cache_write": 414,
+          "output": 258,
+          "cost": 0.009561199999999999
+        }
+      },
+      "sdk_session_total_cost_usd": 0.0173368,
+      "seconds": 4.79
+    },
+    {
+      "session": 2,
+      "turn": 7,
+      "user": "שינוי: מעכשיו התקציב החודשי שלי למזון הוא 1200 שקלים ולא 1500. כמה נשאר לי עכשיו, בשקלים וגם בדולרים?",
+      "response": "עדכנתי את התקציב החודשי למזון מ-1,500₪ ל-**1,200₪**, והוא שמור.\n\n- **הוצאת עד עכשיו:** 70₪\n- **נשאר לך:** **1,130₪**, שהם בערך **366.89$**\n\nההמרה לפי שער של 1$ = 3.0799₪ (שער ECB מ-26.10.2026).",
+      "tools": [
+        "save_preference",
+        "get_balance",
+        "get_exchange_rate"
+      ],
+      "tokens": {
+        "input": 6,
+        "cache_read": 6120,
+        "cache_write": 650,
+        "output": 409
+      },
+      "model_calls": 4,
+      "cost_usd": 0.014628,
+      "cost_usd_at_opus_prices": 0.012678,
+      "per_model": {
+        "claude-haiku-5-5": {
+          "input": 0,
+          "cache_read": 0,
+          "cache_write": 0,
+          "output": 0,
+          "cost": 0
+        },
+        "claude-opus-5-5": {
+          "input": 6,
+          "cache_read": 6120,
+          "cache_write": 650,
+          "output": 409,
+          "cost": 0.014628000000000006
+        }
+      },
+      "sdk_session_total_cost_usd": 0.0319648,
+      "seconds": 7.5
+    },
+    {
+      "session": 2,
+      "turn": 8,
+      "user": "אתה יכול להזכיר לי איזה ספר בדיוק קניתי בהוצאות שלי?",
+      "response": "קנית את **Atomic Habits** ב-75₪. הזמנת אותו מארה\"ב ב-20$, וזו ההוצאה היחידה בקטגוריית ספרים.",
+      "tools": [
+        "get_balance"
+      ],
+      "tokens": {
+        "input": 6,
+        "cache_read": 7439,
+        "cache_write": 375,
+        "output": 125
+      },
+      "model_calls": 2,
+      "cost_usd": 0.007012,
+      "cost_usd_at_opus_prices": 0.005887,
+      "per_model": {
+        "claude-haiku-5-5": {
+          "input": 0,
+          "cache_read": 0,
+          "cache_write": 0,
+          "output": 0,
+          "cost": 0
+        },
+        "claude-opus-5-5": {
+          "input": 6,
+          "cache_read": 7439,
+          "cache_write": 375,
+          "output": 125,
+          "cost": 0.0070118000000000055
+        }
+      },
+      "sdk_session_total_cost_usd": 0.0389766,
+      "seconds": 3.68
+    }
+  ],
+  "totals": {
+    "input": 2480,
+    "cache_read": 45544,
+    "cache_write": 2551,
+    "output": 2579,
+    "cache_hit_pct": 90.1,
+    "model_calls": 20,
+    "tool_calls": 12,
+    "cost_usd": 0.0719,
+    "seconds": 45.7
+  },
+  "checks": [
+    {
+      "name": "exactly 3 expenses saved",
+      "state_based": true,
+      "pass": true,
+      "detail": "count=3"
+    },
+    {
+      "name": "food total saved = 70",
+      "state_based": true,
+      "pass": true,
+      "detail": "total=70.0 items=[{'id': 1, 'date': '2026-10-27', 'amount': 40.0, 'category': 'מזון', 'description': 'חלב ולחם'}, {'id': 3, 'date': '2026-10-27', 'amount': 30.0, 'category': 'מזון', 'description': 'פירות'}]"
+    },
+    {
+      "name": "book expense saved: 75 in 'ספרים' with the title",
+      "state_based": true,
+      "pass": true,
+      "detail": "matching=[{'id': 2, 'date': '2026-10-27', 'amount': 75.0, 'category': 'ספרים', 'description': 'Atomic Habits (הזמנה מארה\"ב, 20$)'}]"
+    },
+    {
+      "name": "contradiction: food budget memory is 1200, old 1500 gone",
+      "state_based": true,
+      "pass": true,
+      "detail": "prefs={'food_monthly_budget': '1200 ILS'}"
+    },
+    {
+      "name": "currency preference saved (ILS)",
+      "state_based": true,
+      "pass": true,
+      "detail": "prefs={'food_monthly_budget': '1200 ILS', 'display_currency': 'ILS'}"
+    },
+    {
+      "name": "external exchange-rate tool used",
+      "state_based": false,
+      "pass": true,
+      "detail": "tools=['get_exchange_rate']"
+    },
+    {
+      "name": "session 2 recalls the 1500 budget: 1460 left",
+      "state_based": false,
+      "pass": true,
+      "detail": "turn 5 regex '1,?460'"
+    },
+    {
+      "name": "session 2 recalls the book title",
+      "state_based": false,
+      "pass": true,
+      "detail": "turn 8 regex 'atomic'"
+    }
+  ],
+  "checks_passed": "8/8",
+  "final_state": {
+    "expenses": [
+      {
+        "id": 1,
+        "date": "2026-10-27",
+        "amount": 40.0,
+        "category": "מזון",
+        "description": "חלב ולחם"
+      },
+      {
+        "id": 2,
+        "date": "2026-10-27",
+        "amount": 75.0,
+        "category": "ספרים",
+        "description": "Atomic Habits (הזמנה מארה\"ב, 20$)"
+      },
+      {
+        "id": 3,
+        "date": "2026-10-27",
+        "amount": 30.0,
+        "category": "מזון",
+        "description": "פירות"
+      }
+    ],
+    "preferences": {
+      "food_monthly_budget": "1200 ILS",
+      "display_currency": "ILS"
+    }
+  },
+  "loc": {
+    "parts": {
+      "loop": 6,
+      "tools": 33,
+      "history": 4,
+      "memory": 15,
+      "context": 1,
+      "compaction": 1,
+      "caching": 1,
+      "tokens": 10
+    },
+    "harness_total": 71,
+    "glue": {
+      "main.py": 22,
+      "agent.py": 88,
+      "tools.py": 38
+    }
+  }
+}
